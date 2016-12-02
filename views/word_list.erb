@@ -2,4 +2,10 @@
 
 <a href="/">Home</a><br>
 <strong><a href="">Words List</a></strong><br>
-<a href="/word/new">Add a New word</a>
+<a href="/word/new">Add a New word</a><br><br>
+
+<ul>
+  <% @word_list.each() do |word| %>
+    <li><a href="/word_list/<%= word.id() %>"><%= word.word() %></a></li>
+  <% end %>
+</ul>

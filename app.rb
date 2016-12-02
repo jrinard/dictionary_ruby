@@ -23,3 +23,8 @@ post('/word_list') do
   @word_list = Word.all()
   erb(:success)
 end
+
+get('/word_list/:id') do
+  @word = Word.find(params.fetch('id').to_i())
+  erb(:word)
+end
