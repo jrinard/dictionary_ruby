@@ -1,13 +1,14 @@
 class Definition
 
   @@def_array = []
+
   define_method(:initialize) do |definition|
     @definition = definition
     @id = @@def_array.length().+(1)
-    @def_array = []
+
   end
 
-  define_method(:definition) do
+  define_method(:single_definition) do
     @definition
   end
 
@@ -15,12 +16,8 @@ class Definition
     @id
   end
 
-  # define_method(:definition) do
-  #   @definition_array
-  # end
-  #
   define_singleton_method(:all) do
-    @@def_array
+    @@def_array = []
   end
 
   define_method(:save) do
@@ -31,15 +28,14 @@ class Definition
     @@def_array = []
   end
 
-  define_singleton_method(:find) do |id|
+  define_singleton_method(:find) do |identification|
     found_def = nil
-    @@def_array.each() do |temp_def|
-      if temp_def.id().eql?(id)
+    @@vehicles.each() do |temp_def|
+      if temp_def.id().eql?(identification.to_i())
         found_def = temp_def
       end
     end
     found_def
   end
-
 
 end

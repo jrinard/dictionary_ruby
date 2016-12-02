@@ -31,6 +31,7 @@ class Word
     @@word_array = []
   end
 
+  #finds word
   define_singleton_method(:find) do |id|
     found_word = nil
     @@word_array.each() do |temp_word|
@@ -42,6 +43,9 @@ class Word
   end
 
 
+  define_method(:add_definition) do |temp_def|
+    @definition_array.push(temp_def)
+  end
 
 
 end
