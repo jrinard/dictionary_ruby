@@ -3,7 +3,6 @@ require('./app')
 Capybara.app = Sinatra::Application
 set(:show_exceptions, false)
 
-
 describe('the add word form file path', {:type => :feature}) do
   it('processes the user click to return WORD FORM page') do
     visit('/')

@@ -1,20 +1,13 @@
 <div id="main" class="well">
-
-
-<a href="/">Home</a> |
-<a href="/words/new">Add New Word</a> |
-<strong><a href="/words/<%= @word.id() %>/definitions/new">Add Definition</a></strong><br>
-
-<h3>Word</h3>
-<h4><%= @word.word() %></h4>
-<hr>
-<h3>Definition</h3>
-
-
-<% @word.definitions().each() do |definition| %>
-<h4><%= definition.definition() %></a></h4>
-<br>
-<% end %>
-
-
+  <a href="/">Home</a> |
+  <a href="/words/new">Add New Word</a> |
+  <strong><a href="/words/<%= @word.id() %>/definitions/new">Add Definition</a></strong><br>
+  <h3>Word</h3>
+  <h4><%= @word.word() %></h4>
+  <hr>
+  <h3>Definition</h3>
+  <% @word.definitions().each() do |definition| %>
+  <h4><%= definition.definition() %></a></h4>
+  <br>
+  <% end %>
 </div>

@@ -1,17 +1,12 @@
 <div id="main" class="well">
-
   <strong><a href="/">Home</a></strong> |
   <a href="/words/new">Add New Word</a>
   <br>
-
   <h3>Add Definition</h3>
-
-<form action="/definitions" method="post">
-    <input type="hidden" name="word_id" id="word_id" value="<%= @word.id() %>">
-    <input type="text" name="definition" id="definition" class="form-control" placeholder="Enter a definition">
-    <p>Example: a colorless, transparent, odorless, tasteless liquid that forms the seas, lakes, rivers, and rain.</p>
-    <button type="submit" class="btn btn-success">Save</button>
-</form>
-
-
+  <form action="/definitions" method="post">
+      <input type="hidden" name="word_id" id="word_id" value="<%= @word.id() %>">
+      <input type="text" name="definition" id="definition" class="form-control" placeholder="Enter a definition">
+      <p>Example: a colorless, transparent, odorless, tasteless liquid that forms the seas, lakes, rivers, and rain.</p>
+      <button type="submit" class="btn btn-success">Save</button>
+  </form>
 </div>
