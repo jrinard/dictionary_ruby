@@ -9,7 +9,7 @@ end
   describe('#definition') do
     it('returns the definition') do
       test_def = Definition.new("liquid")
-      expect(test_def.single_definition()).to(eq("liquid"))
+      expect(test_def.definition()).to(eq("liquid"))
     end
   end
 
@@ -27,13 +27,13 @@ describe('.all') do
   end
 end
 
-# describe('#save') do
-#     it("adds a definition to the array of saved definitions") do
-#       test_def = Definition.new("liquid")
-#       test_def.save()
-#       expect(Definition.all()).to(eq([test_def]))
-#     end
-#   end
+describe('#save') do
+    it("adds a definition to the array of saved definitions") do
+      test_def = Definition.new("liquid")
+      test_def.save()
+      expect(Definition.all()).to(eq([test_def]))
+    end
+  end
 
 describe('.clear') do
   it("empties out all of the saved definitions") do
@@ -42,6 +42,4 @@ describe('.clear') do
     expect(Definition.all()).to(eq([]))
   end
 end
-
-
 end

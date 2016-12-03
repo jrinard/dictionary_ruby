@@ -1,22 +1,11 @@
 class Word
 
+  attr_reader(:word)
   @@word_array = []
-  define_method(:initialize) do |word|
-    @word = word
+  define_method(:initialize) do |attribute|
+    @word = attribute.fetch(:word)
     @id = @@word_array.length().+(1)
-    @definition_array = []
-  end
-
-  define_method(:word) do
-    @word
-  end
-
-  define_method(:id) do
-    @id
-  end
-
-  define_method(:definition) do
-    @definition_array
+    @definitions = []
   end
 
   define_singleton_method(:all) do
@@ -31,21 +20,26 @@ class Word
     @@word_array = []
   end
 
-  #finds word
+  define_method(:id) do
+    @id
+  end
+
+  define_method(:definitions) do
+    @definitions
+  end
+
   define_singleton_method(:find) do |id|
     found_word = nil
-    @@word_array.each() do |temp_word|
-      if temp_word.id().eql?(id)
-        found_word = temp_word
+    @@word_array.each() do |word|
+      if word.id.eql?(id)
+        found_word = word
       end
     end
     found_word
   end
 
-
-  define_method(:add_definition) do |temp_def|
-    @definition_array.push(temp_def)
+  define_method(:add_definition) do |definition|
+    @definitions.push(definition)
   end
-
 
 end

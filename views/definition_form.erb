@@ -1,0 +1,6 @@
+<form action="/definitions" method="post">
+    <input type="hidden" name="word_id" id="word_id" value="<%= @word.id() %>">
+    <label for="definition">Enter Definition</label>
+    <input type="text" name="definition" id="definition">
+    <button type="submit">Save</button>
+</form>

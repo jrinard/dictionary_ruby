@@ -1,7 +1,9 @@
-<h1>Dictionary Project</h1>
-
 
 <strong><a href="">Home</a></strong><br>
-<a href="/word_list">Words List</a>
-<br>
-<a href="/word/new">Add New Word</a>
+<a href="/words/new">Add New Word</a><br><br>
+
+<ul>
+  <% @words_array.each() do |word| %>
+    <li><a href="/words/<%= word.id() %>"><%= word.word() %></a></li>
+  <% end %>
+</ul>
