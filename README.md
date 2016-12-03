@@ -5,14 +5,14 @@
 
 ## Description
 
-This site demonstrates basic ruby code structure using bdd with objects inside objects
+This site allows the user to make a word list. Then add multiple definitions to the word
 
 
 ## Setup/Installation Requirements
 
 * Runs on modern web browsers
 * Edited on Atom Code Editor
-* Run in sinatra with ruby app.rb
+* Run in Sinatra with ruby app.rb
 
 ## Known Bugs
 

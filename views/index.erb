@@ -1,9 +1,15 @@
+<div id="main" class="well">
 
-<strong><a href="">Home</a></strong><br>
-<a href="/words/new">Add New Word</a><br><br>
+<strong><a href="/">Home</a></strong> |
+<a href="/words/new">Add New Word</a>
+<br>
+
+<h3>Word List</h3>
 
 <ul>
   <% @words_array.each() do |word| %>
     <li><a href="/words/<%= word.id() %>"><%= word.word() %></a></li>
   <% end %>
 </ul>
+
+</div>
