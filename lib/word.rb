@@ -1,7 +1,9 @@
 class Word
 
   attr_reader(:word)
+
   @@word_array = []
+  
   define_method(:initialize) do |attribute|
     @word = attribute.fetch(:word)
     @id = @@word_array.length().+(1)

@@ -1,7 +1,7 @@
 class Definition
 
   @@definition_array = []
-
+  
   define_method(:initialize) do |definition|
     @definition = definition
     @id = @@definition_array.length().+(1)
