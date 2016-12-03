@@ -1,12 +1,10 @@
 # _Dictionary_
 
-
 #### By _**Joshua Rinard**_
 
 ## Description
 
 This site allows the user to make a word list. Then add multiple definitions to the word
-
 
 ## Setup/Installation Requirements
 
@@ -20,7 +18,7 @@ This version contains no known issues.
 
 ## Link to app on Heroku
 
-
+https://blooming-cliffs-42207.herokuapp.com
 
 ## Support and contact details
 
